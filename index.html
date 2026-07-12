@@ -14,7 +14,7 @@
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="video-hero.mp4" type="video/mp4">
   </video>
-  <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>
       Robust Bipedal Locomotion on Flowable Slopes<br>
@@ -67,9 +67,6 @@
     <section>
       <h2>Motivation</h2>
       <p>
-        Legged robots are envisioned for deployment in unstructured environments-from dryland 
-        search operations to planetary surfaces where regolith and loose soil dominate the landscape. 
-        Yet most bipedal locomotion research has been developed and validated on flat, hard floors. 
         The gap between laboratory performance and field-relevant capability remains wide, and 
         terrain deformability is one of its least-addressed dimensions. Bridging this gap requires 
         rethinking of how robot feet interact with the ground — treating the terrain not as a rigid 
@@ -102,8 +99,8 @@
         <img src="Robots.png" alt="Robots">
         <figcaption>
           Robots used in our study. Left) BLUEY (Bipedal Locomotor for Understanding and Exploring Yielding terrains) 
-          is constrained by a planarizer, walking in the sagittal plane. The inset shows no cleat and a cleated foot. 
-          Right) 3D and untethered HECTOR (Humanoid for Enhanced ConTrol and Open-source Research) robot on a granular slope testbed. 
+          is constrained by a planarizer, walking in the sagittal plane. Right) 3D and untethered HECTOR 
+          (Humanoid for Enhanced ConTrol and Open-source Research) robot on a granular slope testbed. 
         </figcaption>
         </figure>        
       </p>
@@ -114,7 +111,7 @@
       <subsection>
         <h2>Robophysical Experiments</h2>
         <div class="video-card">
-          <video controls playsinline>
+            <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="SR_Website_Robophysics.mp4" type="video/mp4">
           </video>
           <h3>Robophysical biped on inclined granular terrain</h3>
@@ -123,35 +120,34 @@
             (i) no cleat, (ii) sparse cleat (12 cm), (iii) effective cleat (4 cm), and (iv) dense cleat (1 cm) walking. 
             Middle) Displacement measurements relative to a commanded 100 cm walking distance are shown for each foot. 
             The inset illustrates the pitching angle of the robot for each foot configuration. 
-            The gait parameters are kept constant across each trial: stride length of 10 cm, CoM height of 18 cm, 
-            and step period of 1 s (see Supplementary Materials for details). The no-cleat case achieves 6 cm walking distance (blue curve); 
+            The gait parameters are kept constant across each trial. The no-cleat case achieves 6 cm walking distance (blue curve); 
             the sparse-cleat fails (red); and the effective (orange) and dense-cleats (purple) reach 82 cm and 67 cm 
             walking distances, respectively. The foot configurations that achieve successful walking exhibit limited 
             pitch angles, whereas sparse cleat spacing leads to pitching failure. Right) Heatmap of BLUEY's slipping under 
-            varying cleat depth, spacing, and terrain slope. Each grid component represents the mean slip value of three trials.
+            varying cleat depth, spacing, and terrain slope.
           </p>
         </div>
       </subsection>
-
+      
       <subsection>
       <h2>Cleat Physics Experiments</h2>
       <div class="info-grid">
         <div class="info-card">
           <h2>Failure Mechanisms</h2>
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C2D1_u20_sw_PIV.mp4" type="video/mp4">
           </video>
           <h3>Trailing edge failure with sparse cleats</h3>
           </div>
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C2D1_u30_sw_PIV.mp4" type="video/mp4">
           </video>
           <h3>Insufficient traction failure with sparse cleats</h3>
           </div>
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C13D3_l0_sw_PIV2.mp4" type="video/mp4">
           </video>
           <h3>Incomplete placement of dense cleats on level</h3> 
@@ -161,21 +157,21 @@
         <div class="info-card">
           <h2>Success Mechanisms</h2>
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C4D1_u20_sw_PIV.mp4" type="video/mp4">
           </video>
           <h3>Effective cleats solidifing slopes </h3>
           </div>
 
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C4D1_u30_sw_PIV.mp4" type="video/mp4">
           </video>
           <h3>Effective cleats enhancing traction </h3>
           </div>
 
           <div class="video-card">
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="C13D3_u20_sw_PIV.mp4" type="video/mp4">
           </video>
           <h3>Dense cleats fully pentrating on slopes</h3>
@@ -188,7 +184,7 @@
 
         <div class="video-card">
           <h2>Granular Intrusion and Drag Experiments</h2>
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="IntrusionDrag_Website.mp4" type="video/mp4">
           </video>
              <p class="caption">
@@ -216,22 +212,21 @@
                 
           <div class="video-card">
             <h2>Robotic foot with retractable cleats</h2>    
-            <video controls playsinline>
+            <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="Act_Cleat_Website.mp4" type="video/mp4">
           </video>
           <h3>Retractable cleats</h3>
           <p class="caption">
             Experiments with the retractable foot mechanism on rigid and granular slopes. A)-B) Robot failures 
-            with no and fully extended cleats, respectively. C) Time-lapse of BLUEY walking using the adaptive 
-            cleat depth mechanism. The vertical dashed line represents the starting point for all the trials. 
-            D) BLUEY displacement, pitch angle, and retractable cleat-foot actuator current reading. 
-            The actuated cleats facilitate locomotion on complex surfaces: granular and rigid terrains.
+            with no and fully extended cleats, respectively. C) BLUEY walking using the adaptive 
+            cleat depth mechanism. D) BLUEY displacement, pitch angle, and retractable cleat-foot actuator current reading. 
+            The actuated cleats facilitate locomotion on granular and rigid terrains.
           </p>
           </div>    
 
           <div class="video-card">
             <h2>Hector Experiments</h2>
-          <video controls playsinline>
+          <video class="scroll-video" controls muted loop playsinline preload="metadata">
             <source src="Hector_Website.mp4" type="video/mp4">
           </video>
           <h3>HECTOR Experiments</h3>
@@ -255,7 +250,7 @@
         <img src="Cleat_IntDrag_SpacingDepth.png" alt="Depth Intrusion and Drag">
         <figcaption>
           Intrusion and drag of dual plates of varying spacing and depth. A) illustrates the peak granular 
-          resistive forces that the dual plates experience during intrusion on level and 30$^\circ$ inclines. 
+          resistive forces that the dual plates experience during intrusion on level and 30 degreeinclines. 
           B) illustrates the initial peak resistive forces experienced by the dual plates as they are dragged down the slope.
         </figcaption>
         </figure>
@@ -266,7 +261,7 @@
         <figcaption>
           Sidewall PIV experiments with dual-plates. A-B) Dual plates of 1 cm and 5 cm spacing are first inserted 
           and then dragged on level ground, respectively. C-D) Dual plates of 1 cm and 5 cm spacing are inserted 
-          and dragged down the slope on a 30 $^\circ$ incline.
+          and dragged down the slope on a 30 degree incline.
         </figcaption>
         </figure>
       </subsection>
@@ -313,6 +308,41 @@
     </section>
 
   </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".scroll-video");
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          const video = entry.target;
+
+          if (entry.isIntersecting) {
+            video.muted = true;
+
+            const playPromise = video.play();
+
+            if (playPromise !== undefined) {
+              playPromise.catch(function (error) {
+                console.log("Automatic playback was blocked:", error);
+              });
+            }
+          } else {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.55
+      }
+    );
+
+    videos.forEach(function (video) {
+      observer.observe(video);
+    });
+  });
+</script>
 
 </body>
 </html>
